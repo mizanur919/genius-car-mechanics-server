@@ -28,6 +28,10 @@ async function run() {
             res.send(services);
         })
 
+        app.get('/something', (req, res) =>{
+            res.send('something route');
+        })
+
         // GET Single Data API
         app.get('/services/:id', async (req, res) => {
             const id = req.params.id;
